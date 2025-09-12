@@ -31,6 +31,7 @@ public class DLL {
         }
         while(temp.next!=null){
             temp = temp.next;
+            return;
         }
 
         temp.next = newnode;
