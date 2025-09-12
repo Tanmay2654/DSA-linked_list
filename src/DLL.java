@@ -2,7 +2,7 @@ public class DLL {
 
     public Node head;
 
-    public class Node{
+    public  static class Node{
         int data;
         Node next ;
         Node prev ;
@@ -106,5 +106,6 @@ public class DLL {
         list.addatplace(4 , 16);
 
         list.display();
+        list.displayrev();
     }
 }
