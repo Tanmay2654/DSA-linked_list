@@ -28,10 +28,11 @@ public class DLL {
         Node temp = head;
         if(head == null){
             head = newnode;
+            return;
         }
         while(temp.next!=null){
             temp = temp.next;
-            return;
+
         }
 
         temp.next = newnode;
