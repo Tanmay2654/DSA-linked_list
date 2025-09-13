@@ -37,6 +37,28 @@ public class CLL {
         System.out.println("END");
     }
 
+    public void delete(int data){
+        Node temp = head ;
+        if(temp == null){
+            return;
+        }
+
+        if(temp.data == data){
+            head = head.next;
+            tail.next = head;
+            return ;
+        }
+
+        do{
+            Node n = temp.next;
+            if(n.data == data){
+                temp.next = n.next;
+                break;
+            }
+            temp = temp.next;
+        }while(temp!=head);
+    }
+
     public static void main(String[] args) {
         CLL list = new CLL();
         list.insert(2);
@@ -45,6 +67,8 @@ public class CLL {
         list.insert(5);
         list.insert(6);
         list.insert(7);
+
+        list.delete(5);
 
         list.display();
     }
